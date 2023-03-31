@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path:"survey", component:SurveyComponent},
+  { path:"**", component:HomeComponent},
 ];
 
 @NgModule({

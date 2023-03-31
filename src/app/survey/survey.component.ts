@@ -15,7 +15,6 @@ export class SurveyComponent {
   
   completed = false;
   submitbtn = false;
-  textarea = false;
   answers: number[] = [];
   questions = [
     { question: 'How satisfied are you with our products?', max: 5 },
@@ -45,7 +44,6 @@ export class SurveyComponent {
     if (this.num < this.questions.length - 1) {
       this.num++;
       if (this.num == this.questions.length - 1) {
-        this.textarea=true;
         this.submitbtn = true;
       }
     }

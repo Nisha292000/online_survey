@@ -51,7 +51,10 @@ export class SurveyComponent {
 
   submit() {
     const surveyAnswers = { 
-      questions: this.questions.map((q, i) => ({ question: q.question, star: this.answers[i] })),
+      questions: this.questions.map((q, i) => ({ 
+        question: q.question, 
+        star: this.answers[i],
+      })),
       completed: true
     };
     this.http.post('http://localhost:3000/survey', surveyAnswers).subscribe(
